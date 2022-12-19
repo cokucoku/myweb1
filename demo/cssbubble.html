@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>纯CSS实现气泡对话框</title>
+</head>
+
+<body>
+<div class="type1 type">
+  我单身，喜欢20-26岁的女生，身高大与于165的女生
+</div>
+<div class="type2 type">
+  我单身，喜欢20-26岁的女生，身高大与于165的女生
+</div>
+<div class="type3 type">
+  我单身，喜欢20-26岁的女生，身高大与于165的女生
+</div>
+<div class="type4 type">
+  我单身，喜欢20-26岁的女生，身高大与于165的女生
+</div>
+<style type="text/css">
+.type {
+  background: #f60;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 10px;
+  max-width: 50vw;
+}
+
+.type4 {
+  border-radius: 100%;
+  width: 300px;
+  height: 230px;
+  max-width: inherit;
+  padding: 60px 80px;
+  font-size: 22px;
+}
+
+.type4:before {
+  content: '';
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    color: #f60;
+    border-width: 0px 120px 0px 0px;
+    border-style: solid;
+    border-color: transparent currentcolor transparent transparent;
+    left: 16px;
+    top: 42%;
+    border-radius: 0px 0px 150px 0px;
+    z-index: -1;
+}
+
+.type3:before {
+  content: '';
+  position: absolute;
+  border-width: 8px 22px;
+  border-style: solid;
+  border-color: transparent #f60 #f60 transparent;
+  right: 100%;
+  bottom: 10%;
+  transform: skewY(-30deg);
+}
+
+.type2:before {
+  content: '';
+  position: absolute;
+  border-width: 10px 16px;
+  border-style: solid;
+  border-color: #f60 #f60 transparent transparent;
+  right: 100%;
+  top: 50%;
+  margin-top: -5px;
+}
+
+.type1:before {
+  content: '';
+  position: absolute;
+  border-width: 10px 16px;
+  border-style: solid;
+  border-color: transparent #f60 transparent transparent;
+  right: 100%;
+  top: 50%;
+  margin-top: -5px;
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+</style>
+
+</body>
+
+</html>

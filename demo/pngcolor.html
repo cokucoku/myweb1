@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>png小图标CSS赋色演示实例页面</title>
+  <style type="text/css">
+  * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  .aliyun {
+    width: 100px;
+    height: 56px;
+    overflow: hidden;
+  }
+
+  .aliyun .ico {
+    width: 100px;
+    height: 56px;
+    background: url("img/aliyun.png");
+    background-size: cover;
+  }
+
+  .method1 {
+    filter: drop-shadow(100px 0 #f60);
+    position: relative;
+    left: -100px;
+  }
+
+  .method2 {
+    background: #658 !important;
+    -webkit-mask: url(img/aliyun.png);
+    -webkit-mask-size: cover;
+  }
+
+  .aliyun .method3 {
+    color: #560;
+    background: linear-gradient(currentColor, currentColor), url(img/aliyun.png), #fff;
+    background-blend-mode: lighten, normal;
+    background-size: cover;
+  }
+
+  </style>
+</head>
+
+<body>
+<div class="aliyun">
+  <div class="method1 ico"></div>
+</div>
+<div class="aliyun">
+  <div class="method2 ico"></div>
+</div>
+<div class="aliyun">
+  <div class="method3 ico"></div>
+</div>
+</body>
+
+</html>
