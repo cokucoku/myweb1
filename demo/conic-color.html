@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>CSS conic-gradient()饼图</title>
+</head>
+
+<body>
+<div class="hs-wheel"></div>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+
+    body {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;height: 100vh;
+
+    }
+
+    .hs-wheel {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: conic-gradient(red, magenta, blue, aqua, lime, yellow, red);
+    }
+
+
+</style>
+</body>
+
+</html>
