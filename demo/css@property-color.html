@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>CSS数字的变换</title>
+</head>
+
+<body>
+<span></span>
+<style>
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+span{
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(45deg,var(--colorA),var(--colorB));
+  animation: color 2s infinite;
+}
+@keyframes color {
+  25%{
+    --colorA:#fc0;
+    --colorB:#c00
+  }
+  50%{
+    --colorA:#000;
+    --colorB:#fff
+  }
+
+}
+@property --colorA{
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #46bd87;
+}
+
+@property --colorB{
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #4753bd;
+}
+</style>
+
+</body>
+
+</html>

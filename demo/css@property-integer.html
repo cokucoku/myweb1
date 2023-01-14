@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>CSS数字的变换</title>
+</head>
+
+<body>
+<span></span>
+<style>
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+span {
+  font-size: 188px;
+
+}
+span:after{
+  counter-reset: num var(--num);
+  color: #46bd87;
+  content: counter(num);
+  animation: num 1s infinite;
+}
+@keyframes num {
+  to{
+    --num:10
+  }
+}
+@property --num{
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+</style>
+
+</body>
+
+</html>

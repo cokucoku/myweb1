@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>CSS数字的变换</title>
+</head>
+
+<body>
+<span></span>
+<style>
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+span {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: conic-gradient(yellowgreen 0% var(--deg),transparent 0%  100%);
+  animation: deg 2s infinite alternate ;
+}
+
+@keyframes deg {
+  to {
+    --deg: 100%
+  }
+
+}
+
+@property --deg {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+</style>
+
+</body>
+
+</html>
