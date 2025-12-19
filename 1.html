@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Battery Status API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+<div class="net"></div>
+
+<script>
+    /*侦测连接状态变化*/
+    let net = document.querySelector('.net')
+    let connection = navigator.connection;
+    let type = connection.effectiveType;
+    updateConnectionStatus()
+
+    function updateConnectionStatus() {
+        type = connection.effectiveType;
+        net.innerText=type
+    }
+
+    connection.addEventListener("change", updateConnectionStatus);
+</script>
+
+</body>
+</html>
